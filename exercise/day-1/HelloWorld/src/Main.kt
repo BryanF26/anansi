@@ -1,10 +1,11 @@
 fun main() {
-    val secretNum = 7
-    val guessed = arrayOf(5,3,7,0)
-    var i = 0
-    do{
-        println(guessed[i])
-        if (secretNum.equals(guessed[i]) || secretNum.equals(0)) break
-        i++
-    } while (true)
+    var fuelTank = 3
+    while (fuelTank < 50){
+        println("Fuel Tank: $fuelTank")
+        fuelTank += 5
+        if(fuelTank > 40) {
+            println("Fuel Tank: $fuelTank")
+            break
+        }
+    }
 }
