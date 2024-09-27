@@ -1,5 +1,11 @@
 fun main() {
-    var scores = 90
-    var grades = if(scores in 90..100) "A" else if (scores in 80..89) "B" else if (scores in 70..79) "C" else if (scores in 60..69) "D" else if(scores in 0..59) "F" else "Masukkan nilai range 0 sampai 100"
-    println("Grades: " + grades)
+    val years = 3
+    val salary = 8000000
+    var bonus = when {
+        years > 5 -> salary * 0.2
+        years in 2..5 -> salary * 0.1
+        years in 0..2 -> 0
+        else -> "Years mustn't negative"
+    }
+    println("Bonus: " + bonus)
 }
