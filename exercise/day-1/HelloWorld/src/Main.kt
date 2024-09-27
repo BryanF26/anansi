@@ -1,11 +1,10 @@
 fun main() {
-    val spends = 200
-    var finalPrice = when {
-        spends > 200 -> spends * 0.7
-        spends > 100 && spends <= 200 -> spends * 0.8
-        spends > 50 && spends <= 100 -> spends * 0.9
-        spends in 0..50 -> spends
-        else -> "Spends mustn't negative"
+    val units = 250
+    var totalElecBill = when {
+        units > 200 -> 250 + (units-200) * 2
+        units in 101..200 -> 100 + (units-100) * 1.5
+        units in 0..100 -> units
+        else -> "Units mustn't negative"
     }
-    println("Final Price: $finalPrice")
+    println("Final Price: $$totalElecBill")
 }
