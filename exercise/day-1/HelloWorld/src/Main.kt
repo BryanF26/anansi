@@ -4,7 +4,7 @@ fun main() {
     var i = 0
     do{
         println(guessed[i])
-        if (secretNum.equals(guessed[i])) break
+        if (secretNum.equals(guessed[i]) || secretNum.equals(0)) break
         i++
     } while (true)
 }
