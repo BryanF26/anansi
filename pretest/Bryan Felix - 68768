@@ -1,0 +1,42 @@
+1. E
+2. C
+3. B
+4. B
+5. D
+1. False
+2. True
+3. True
+4. True
+5. False
+1. Readability. Comparing to Java, Kotlin has more readable and precise code which makes it easier to understand the program, Null-Safe, Using Getters and Setters, Interoperability, Immutability.
+2. val keyword to declare variables that are assigned a value only once. These are immutable, read-only local variables that can’t be reassigned a different value after initialization and var keyword to declare variables that can be reassigned. These are mutable variables, and you can change their values after initialization
+3. Null safety in Kotlin is a key feature designed to eliminate the risk of null pointer exceptions (NPEs)
+4. when can be used either as an expression or as a statement. If it is used as an expression, the value of the first matching branch becomes the value of the overall expression. If it is used as a statement, the values of individual branches are ignored. Just like with if, each branch can be a block, and its value is the value of the last expression in the block.
+5. Dependency Injection (DI) is a design pattern used in software development where an object’s dependencies (other objects or services it requires) are provided by an external entity rather than the object itself creating them. This promotes loose coupling between components, making the system more modular, testable, and maintainable.
+6. Kotlin simplifies function declarations compared to Java, making the code more concise and expressive
+7. Higher-order functions and lambdas in Kotlin:
+Higher-order functions are functions that take other functions as parameters or return a function. Lambdas are anonymous functions used to simplify code and make it more concise.
+8. It's a design pattern used in software development. The key components are: 
+Model: Manages data and business logic.
+View: UI component, responsible for rendering data.
+ViewModel: Acts as a bridge, fetching data from the model and providing it to the view in a UI-friendly manner.
+9. The ViewModel retrieves data from the Model and provides it to the View. It holds and manages UI-related data while maintaining lifecycle awareness, ensuring data survives configuration changes like screen rotations. The ViewModel doesn't directly reference the View to maintain separation of concerns.
+10. LiveData is an observable data holder that allows the View to react to data changes in the ViewModel. It ensures that the View updates only when necessary, and it is lifecycle-aware, meaning it only updates active views.
+11. Kotlin reduces boilerplate code with features like type inference, smart casting, lambda expressions, and data classes. It makes the code more readable and expressive by avoiding verbosity found in other languages like Java.
+12. Kotlin's for loop is more expressive and simpler, often using ranges. For example:
+for (i in 1..5) {
+    println(i)  // Output: 1 2 3 4 5
+}
+This is cleaner than typical for loops in other languages that require initialization, condition, and iteration expressions.
+13. Kotlin can automatically infer the type of a variable based on its initializer, reducing the need for explicit type declarations
+14. Encapsulation restricts direct access to an object’s data and methods. In Kotlin, it is implemented using access modifiers (private, protected, internal, public) to hide data and expose only necessary methods.
+15. Data binding allows the UI (View) to automatically update when data in the ViewModel changes. It provides a link between the UI and ViewModel, eliminating the need for manual updates and reducing the likelihood of UI-related bugs.
+16. Repositories are used to manage and abstract data sources (e.g., network, local database). They provide a clean API for the ViewModel to request data, promoting separation of concerns and easier testing.
+17. Null safety: Eliminates NullPointerException.
+Interoperability with Java: Kotlin can seamlessly work with existing Java code.
+Coroutines: Simplifies asynchronous programming.
+Conciseness: Reduces boilerplate code.
+Expressiveness: Improved readability and maintainability.
+18. Koin is a Kotlin-based dependency injection framework. You declare dependencies in modules and inject them into classes.
+19. Constructor injection ensures that dependencies are provided at the time of object creation, making the class easier to test, and its dependencies more explicit. Field injection can lead to dependencies being injected later, increasing the risk of null references and making testing more difficult.
+20. Kotlin provides built-in null safety by differentiating between nullable and non-nullable types. You cannot assign null to a variable unless it’s explicitly marked as nullable, reducing the chances of NullPointerException. The safe call operator (?.) also helps to handle nullable values without crashing the app.

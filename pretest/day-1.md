@@ -56,7 +56,7 @@
    - True
    - False
 
-4. **MVVM architecture pattern is intended to separate the presentation logic from business logic.**
+4. ** **
 
    - True
    - False
