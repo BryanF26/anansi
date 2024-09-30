@@ -1,0 +1,89 @@
+1. a
+2. d
+3. c
+4. b
+5. c
+6. the reference of var can be change and be reassign and val cannot
+7. use listOf() or mutableListOf()
+8. 
+    var x = 5
+    if(x < 5){
+        println("Lebih kecil dari 5")
+    } else{
+        println("Lebih besar dari 5")
+    }
+9. if the variable want to handle null,  use ? operator
+10. A lambda function in Kotlin is an anonymous function that can be treated as an expression. Lambda functions are particularly useful when you need to pass a function as a parameter, return it, or simply reduce boilerplate code when using functional programming constructs.
+11. A basic class in Kotlin can be defined using the class keyword followed by the class name.
+12. 
+val items = listOf("apple", "banana", "cherry")
+
+for (item in items) {
+    println(item)
+}
+13. The when statement in Kotlin is a powerful conditional expression that can be used as a replacement for switch statements found in other languages like Java. It allows you to match a value or expression against multiple conditions in a concise and readable way.
+14. 
+val number = 17
+if (number % 2 == 0) println("$number is even") else println("$number is odd")
+15. val numbers = arrayOf(1, 2, 3, 4, 5)
+16. No
+17. Yes
+18. Yes
+19. Yes
+20. Yes
+21. 
+    var x = "Hello"
+    x = "World"
+22. 
+    fun sum(a: Int, b: Int): Int {
+        return a + b
+    }
+    sum(5, 10)
+23. 
+    val myList = mutableListOf(1, 2, 3)
+    myList.add(4)
+24. 
+    val name: String? = null
+25. 
+    if (x > 5) {
+        println("x is greater than 5")
+    }
+26. 
+    when (x) {
+        1 -> println("One")
+        2 -> println("Two")
+        else -> println("Other")
+    }
+27. 
+    fun greet() {
+        println("Hello, $name")
+    }
+28. 
+    val myVar = 10
+    val result = myVar + 5
+29. 
+    val numbers = arrayOf(1, 2, 3)
+    println(numbers[2])
+30. 
+    class Person(val name: String, val age: Int) {
+        fun greet() {
+            print("Hello, my name is $name and I'm $age")
+        }
+    }
+    val x = Person("Rey", 20)
+    x.greet()
+Story
+fun reserveSeat(name: String, seatNumber: Int, availableSeats:Array<Int>) {
+    if (availableSeats.contains(seatNumber)) {
+        availableSeats[seatNumber-1] = 0  // Mark the seat as reserved by setting it to 0
+        println("$name reserved seat $seatNumber.")
+    } else {
+        println("Seat $seatNumber is already reserved.")
+    }
+}
+
+fun main() {
+    val availableSeats = arrayOf(1, 2, 3, 4, 5)
+    reserveSeat("John", 2, availableSeats)
+    reserveSeat("Sarah", 2, availableSeats)
+}
