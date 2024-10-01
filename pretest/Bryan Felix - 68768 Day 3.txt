@@ -1,0 +1,29 @@
+1. b
+2. b
+3. c
+4. c
+5. c
+6. listOf immutable and mutableListOf  mutable
+7. onStop(): Called when the activity is no longer visible to the user but still exists in memory. The activity can be restarted if the user returns.
+onDestroy(): Called when the activity is finishing or being destroyed by the system. This is the final callback before the activity is completely removed from memory.
+8. Coroutines are lightweight and allow for asynchronous programming without blocking threads. They can handle multiple operations with a smaller overhead compared to threads, as they don't require heavy context switching and are easier to manage with structured concurrency.
+9. Use architecture components like ViewModel to retain UI-related data across configuration changes.
+Avoid holding references to activity contexts in long-lived objects (e.g., using application context or weak references when necessary).
+Unregister listeners, callbacks, and close resources in onDestroy() to free up resources.
+10. View: Represents a single UI element, such as a button, text field, or image.
+ViewGroup: A container that holds multiple View objects or other ViewGroup objects, allowing them to be organized and laid out on the screen (e.g., LinearLayout, ConstraintLayout).
+11. RecyclerView: More flexible, efficient, and supports large data sets by reusing views (recycling), better performance, supports animations, and can use various layout managers (linear, grid, staggered).
+ListView: Simpler, but less efficient than RecyclerView and has fewer customization options.
+12. onResume() is called when the activity enters the foreground and is interactive to the user. It is the final step in the activity lifecycle where the activity becomes active and ready for user interaction.
+13. launch is used to start a coroutine that runs without blocking the current thread. It returns a Job, which can be used to manage the coroutine’s lifecycle, such as canceling it.
+14. LiveData is an observable data holder class that is lifecycle-aware. It automatically updates the UI components (like Activity or Fragment) when the data changes and ensures that UI updates happen only when the lifecycle is in an active state (e.g., resumed). This helps avoid memory leaks and crashes from updates happening when the activity or fragment is in an inactive state.
+15. The ViewModel class is designed to hold and manage UI-related data in a lifecycle-conscious way. It allows data to survive configuration changes (e.g., screen rotations) and helps prevent memory leaks by not storing references to activities or views.
+16. No
+17. Yes
+18. No
+19. Yes
+20. Yes
+21. 
+    val myList = mutableListOf(1, 2, 3)
+    myList.add(4)
+22-31.  Not applicable
