@@ -127,7 +127,7 @@
    - Notify members when their membership is about to expire and allow renewal. Membership benefits adjust based on renewal time (e.g., early renewal benefits).
 
 6. **List Classes by Date**:
-   - View available fitness classes by date and time. Include information on the number of available spots.
+   - View available fitness classes by range of dates. Include information on the number of available spots.
 
 #### Validation:
 
