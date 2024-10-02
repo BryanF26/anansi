@@ -1,0 +1,88 @@
+1. b
+2. b
+3. b
+4. c
+5. b
+6. listOf() creates an immutable list, while mutableListOf() creates a mutable list that can be modified after creation.
+7. You can suspend a coroutine in Kotlin by calling a suspending function (e.g., delay()) or by using the suspend modifier in a function.
+8. onPause() is called when an activity is partially obscured, allowing it to pause ongoing tasks that don't need to run while the activity is not in the foreground.
+9. RecyclerView is preferred over ListView because it is more efficient in handling large datasets by using ViewHolder pattern and supports multiple layout types and animations.
+10. Room provides an abstraction layer over SQLite, making database access easier and more efficient with compile-time checks and simpler query syntax.
+11. Retrofit simplifies network requests by providing an easy-to-use interface for defining API endpoints and automatic conversion of JSON responses into Kotlin objects.
+12. The onCreate() method is used for initializing the activity, setting up the UI, and restoring any saved state.
+13. LiveData is an observable data holder that is lifecycle-aware, allowing UI components to observe changes and react to data updates without memory leaks.
+14. You can handle screen rotations by saving the current activity state in onSaveInstanceState() and restoring it in onCreate() or onRestoreInstanceState().
+15. Advantages of using coroutines include lightweight execution, easier management of asynchronous tasks, cancellation support, and reduced boilerplate code compared to traditional threads.
+16. Yes
+17. Yes
+18. Yes
+19. Yes
+20. No
+21. 
+val myList = mutableListOf(1, 2, 3)
+myList.add(4)
+22.
+suspend fun myFunction() {
+    delay(1000L)
+    println("Completed")
+}
+23.
+val map = mutableMapOf(1 to "One", 2 to "Two")
+map[3] = "Three"
+24.
+val intent = Intent(this, SecondActivity::class.java)
+startActivity(intent)
+25.
+val view = findViewById<Button>(R.id.myButton)
+view.setOnClickListener {
+    Toast.makeText(it.context, "Button clicked", Toast.LENGTH_SHORT).show()
+}
+26.
+fun add(a: Int, b: Int): Int {
+    return a + b
+}
+
+val result = add(5, 10)
+27.
+override fun onSaveInstanceState(outState: Bundle) {
+    outState.putInt("KEY", 1)
+}
+
+override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+    val key = savedInstanceState.getInt("KEY")
+}
+28.
+val textView = findViewById<TextView>(R.id.textView)
+textView.text = getString(R.string.app_name)
+29.
+val job = GlobalScope.async {
+    delay(1000L)
+    "Hello"
+}
+
+runBlocking { 
+    val result = job.await()
+}
+30.
+fun networkRequest() {
+    val url = URL("https://example.com")
+    val connection = url.openConnection() as HttpURLConnection
+    connection.requestMethod = "POST"
+}
+31.
+class UserAdapter(private val userList: List<User>) : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
+
+    class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.user_item, parent, false)
+        return UserViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
+        val user = userList[position]
+        holder.itemView.findViewById<TextView>(R.id.userName).text = user.name // Ensure user.name is valid
+    }
+
+    override fun getItemCount() = userList.size
+}
