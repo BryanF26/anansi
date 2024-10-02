@@ -1,5 +1,5 @@
 
-### **1. Calculator App**
+### **1. Calculator App** Jo
 
 **Objective**: Create a simple calculator app that performs basic arithmetic operations like addition, subtraction, multiplication, and division.
 
@@ -16,7 +16,7 @@
 
 ---
 
-### **2. Temperature Converter App**
+### **2. Temperature Converter App** Kar
 
 **Objective**: Create an app that converts temperature between Celsius and Fahrenheit.
 
@@ -36,7 +36,7 @@
 
 ---
 
-### **3. Simple Tip Calculator App**
+### **3. Simple Tip Calculator App** Kar
 
 **Objective**: Create an app that calculates the tip amount and total cost based on the user input.
 
@@ -53,7 +53,7 @@
 
 ---
 
-### **4. BMI Calculator App**
+### **4. BMI Calculator App** Ken
 
 **Objective**: Create a BMI (Body Mass Index) calculator that calculates the BMI based on user input for weight and height.
 
@@ -71,7 +71,7 @@
 
 ---
 
-### **5. Currency Converter App**
+### **5. Currency Converter App** Ken
 
 **Objective**: Create an app that converts between two currencies (e.g., USD to EUR and EUR to USD).
 
@@ -89,7 +89,7 @@
 
 ---
 
-### **6. Distance Converter App**
+### **6. Distance Converter App** Jo
 
 **Objective**: Create an app that converts between kilometers and miles.
 
@@ -142,3 +142,27 @@
   where `P` is the loan amount, `r` is the monthly interest rate (annual interest rate divided by 12), and `n` is the tenure in months.
 - Display the result in a `TextView`.
 
+### **9. Unit Converter App**
+
+**Objective**: Create an app that converts various units, such as length, weight, and volume.
+
+#### Requirements:
+- **Input**: One `EditText` for the amount.
+- **Conversion Options**: Provide buttons for different units (e.g., meters to feet, kilograms to pounds, liters to gallons).
+- **Output**: Display the converted amount in a `TextView`.
+- **Bonus**: Allow the user to select the unit categories (length, weight, volume) and the specific units to convert between.
+
+#### Instructions:
+- Create an `EditText` where the user inputs the amount to convert.
+- Add buttons for common unit conversions, such as:
+  - Length: `Convert to Feet`, `Convert to Meters`
+  - Weight: `Convert to Pounds`, `Convert to Kilograms`
+  - Volume: `Convert to Gallons`, `Convert to Liters`
+- Provide formulas for each conversion:
+  - Meters to Feet: `m * 3.28084`
+  - Feet to Meters: `ft / 3.28084`
+  - Kilograms to Pounds: `kg * 2.20462`
+  - Pounds to Kilograms: `lb / 2.20462`
+  - Liters to Gallons: `L * 0.264172`
+  - Gallons to Liters: `gal / 0.264172`
+- When a button is clicked, calculate the result and display it in a `TextView`.
