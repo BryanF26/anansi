@@ -1,0 +1,47 @@
+1. a
+2. b
+3. b
+4. b
+5. b
+
+1. True
+2. True
+3. False
+4. True
+5. True
+
+1. RecyclerView is a flexible and efficient component for displaying large datasets in a list or grid format. It allows for recycling of views that have scrolled off the screen, reducing memory usage and improving performance. It supports various layouts through LayoutManager, and provides built-in animations for item changes, additions, and deletions.
+2. Use the Button widget in your XML layout file. You can set its onClick attribute to a method in your activity or set an OnClickListener in your Java/Kotlin code
+3. LinearLayout arranges its child views in a single direction, either horizontally or vertically, making it simple but potentially inefficient for complex layouts due to nested structures. ConstraintLayout, on the other hand, allows for more flexible positioning of child views relative to each other and the parent container using constraints, enabling more complex UIs without deep nesting, which enhances performance.
+4. You can display a progress indicator using ProgressBar. It can be defined in XML with attributes to specify its style (determinate or indeterminate) and visibility.
+5. A CheckBox allows users to select or deselect an option in an app. It represents a boolean state (checked or unchecked) and can be used in forms or settings where multiple options can be selected independently. The state of a CheckBox can be easily retrieved in the app logic to determine user preferences.
+
+1.
+<ImageView
+       android:id="@+id/imageView"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/your_image" />
+2.
+<Button
+       android:id="@+id/button"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Press Me" />
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val button: Button = findViewById(R.id.button)
+        button.setOnClickListener {
+            Toast.makeText(this, "Button Pressed", Toast.LENGTH_SHORT).show()
+        }
+    }
+}
+3.
+<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
