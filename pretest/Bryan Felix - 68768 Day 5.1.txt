@@ -1,0 +1,46 @@
+1. d
+2. b
+3. a
+4. c
+5. b
+
+1. False
+2. True
+3. False
+4. True
+5. False
+
+1. onPause() is called when an activity is partially obscured by another activity (e.g., a dialog appears). The activity is still visible but not in the foreground. onStop() is called when the activity is completely hidden or no longer visible on the screen.
+2. Passing data using the putExtra() method of Intent
+
+val intent = Intent(this, SecondActivity::class.java)
+intent.putExtra("KEY", value)
+startActivity(intent)
+
+3. onSaveInstanceState() allows you to save the activity's current state (like UI elements and variables) before it is destroyed during configuration changes, such as screen rotations. You can restore the state in onCreate() or onRestoreInstanceState().
+
+4. When the user presses the back button, the activity moves through the following states:
+onPause() → onStop() → onDestroy()
+
+5. Use startActivityForResult() to start the activity and override onActivityResult() to handle the result:
+
+startActivityForResult(intent, REQUEST_CODE)
+
+override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
+        // Handle the result
+    }
+}
+
+1.
+val intent = Intent(this, MainActivity::class.java)
+startActivity(intent)
+2.
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
+}
+3.
+override fun onDestroy() {
+    super.onDestroy()
+}
