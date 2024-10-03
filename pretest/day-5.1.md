@@ -121,4 +121,3 @@
    3. In `SecondActivity`, return a result (e.g., a message) back to `MainActivity`.
    4. In `MainActivity`, override `onActivityResult()` to receive and display the result.
 
-These tasks and questions should provide a comprehensive overview for your students to understand activities in Android development.
