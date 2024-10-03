@@ -117,7 +117,7 @@
    
    **Instructions:**
    1. Create `MainActivity` and `SecondActivity`.
-   2. In `MainActivity`, start `SecondActivity` using `startActivityForResult()`.
+   2. In `MainActivity`, start `SecondActivity` using `startActivityForResult()` or `registerForActivityResult()`.
    3. In `SecondActivity`, return a result (e.g., a message) back to `MainActivity`.
    4. In `MainActivity`, override `onActivityResult()` to receive and display the result.
 
