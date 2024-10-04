@@ -1,4 +1,5 @@
 ### **Soundtok - Requirements and Tasks**
+team 3
 
 ### **Project Overview:**
 This Android app allows users to upload or record sounds, add metadata (title, description, time, location), and manage audio files. Users can browse a list of sounds, view detailed sound information, and play audio. The project will use fragments for listing and adding sounds, and an activity for viewing sound details.

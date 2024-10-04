@@ -2,6 +2,8 @@
 
 ### **Aplikasi Daftar Film - Requirements and Tasks**
 
+team 2
+
 ### **Project Overview:**
 This app will allow users to browse movies, search by category, save movies to a watchlist, and rate movies they have watched. The app will interact with a movie database API to fetch the latest movies and detailed movie information.
 

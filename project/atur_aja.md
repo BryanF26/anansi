@@ -1,4 +1,5 @@
 ### **Aplikasi Pengelola Keuangan Pribadi - Updated Requirements and Tasks**
+team 1
 
 ### **Project Overview:**
 This app helps users track their daily expenses, provides an overview of monthly spending, and requires users to log in or register using an API. It consists of fragments to display the current balance, a pie chart of expenses, view expense history, and an activity to add new expenses. 

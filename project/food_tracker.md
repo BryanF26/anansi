@@ -1,5 +1,6 @@
 
 ### **Food Tracker App - Updated Requirements and Tasks**
+team 1
 
 ### **Project Overview**
 This is an Android app built with Kotlin. It allows users to log in using the Reqres API, and once logged in, they can post food photos with descriptions. Food posts are stored locally using SharedPreferences for user credentials and local storage for post data.

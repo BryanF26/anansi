@@ -1,4 +1,5 @@
 ### **YahNgantorLagi - Detailed Requirements and Tasks**
+team 3
 
 ### **Project Overview:**
 This app is designed to simplify employee attendance management. It features a summary of attendance, clock-in/clock-out functionality using photos and location, leave requests, and the current weather forecast. Additionally, it allows employees to view their profile and manage absentee forms.
