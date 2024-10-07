@@ -1,0 +1,38 @@
+Optional Questions
+
+1.c
+2.c
+3.a
+4.b
+5.b
+
+True/False Questions
+
+1.False
+2.False
+3.True
+4.True
+5.False
+
+Short Answer Questions
+
+1.MediaPlayer is used to manage audio and video playback in Android apps. It allows developers to play audio files from various sources, including local storage and streaming over the internet.
+2.You can create a VideoView in your XML layout or programmatically, set the video path using setVideoPath() or setVideoURI(), and then start the playback using start(). Optionally, you can add a MediaController for playback controls.
+3.To capture an image, you create an Intent with MediaStore.ACTION_IMAGE_CAPTURE, start the activity using startActivityForResult(), and handle the result in onActivityResult() to retrieve the captured image.
+4.The required permission is android.permission.RECORD_AUDIO. You also need to request this permission at runtime for Android 6.0 (API level 23) and above.
+5.You can use MediaPlayer to play audio files from the raw resources directory by referencing the resource using R.raw.filename, creating an instance of MediaPlayer, and calling start() after preparing the media player.
+
+Code Fix Questions
+1.
+val mediaPlayer = MediaPlayer()
+mediaPlayer.setDataSource(context, Uri.parse("android.resource://your.package.name/raw/audio"))
+mediaPlayer.prepare() // Prepare the MediaPlayer
+mediaPlayer.start() // Start playback
+
+2.
+val videoView: VideoView = findViewById(R.id.videoView)
+videoView.setVideoPath("android.resource://your.package.name/raw/video") // Set video path
+videoView.start() // Start playback
+
+3.
+Not sure

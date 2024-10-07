@@ -1,0 +1,74 @@
+1.b
+2.b
+3.b
+4.c
+5.a
+
+True/False Questions
+
+1.True
+2.False
+3.True
+4.False
+5.False
+
+Short Answer Questions
+
+1.GsonConverterFactory is used to convert the JSON response from the server into Java/Kotlin objects by integrating the Gson library with Retrofit.
+2.To perform asynchronous calls, you can call the enqueue() method on the call object and provide a callback to handle success or failure.
+3.Synchronous calls block the main thread and wait for the server's response, which can cause lag or freezing in the app. Asynchronous calls run in the background and return results through callbacks, keeping the app responsive.
+4.You can use @Query like this:
+@GET("users")
+fun getUsers(@Query("page") page: Int): Call<List<User>>
+5.In Retrofit, errors can be handled in the onFailure() callback when using enqueue() for asynchronous calls. You can also inspect the Response object in onResponse() to check for errors (such as 4xx or 5xx status codes). Additionally, interceptors from libraries like OkHttp can be used for more comprehensive network error handling.
+
+Code Fix Questions
+1.
+@GET("users")
+fun getUsers(): Call<List<User>>
+
+val call = apiService.getUsers()
+call.enqueue(object : Callback<List<User>> {
+    override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
+        // Handle response
+    }
+
+    override fun onFailure(call: Call<List<User>>, t: Throwable) {
+        // Handle failure
+    }
+})
+
+2.
+@POST("login")
+fun loginUser(@Body credentials: Map<String, String>): Call<LoginResponse>
+
+val credentials = mapOf("username" to "yourUsername", "password" to "yourPassword")
+val call = apiService.loginUser(credentials)
+call.enqueue(object : Callback<LoginResponse> {
+    override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+        // Handle response
+    }
+
+    override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+        // Handle failure
+    }
+})
+3.
+@GET("user/{id}")
+fun getUserById(@Path("id") userId: Int): Call<User>
+
+val call = apiService.getUserById(123)
+call.enqueue(object : Callback<User> {
+    override fun onResponse(call: Call<User>, response: Response<User>) {
+        // Handle response
+    }
+
+    override fun onFailure(call: Call<User>, t: Throwable) {
+        // Handle failure
+    }
+})
+
+
+
+
+

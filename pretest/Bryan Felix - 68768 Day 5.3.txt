@@ -1,0 +1,46 @@
+Optional Questions
+
+1.b
+2.a
+3.b
+4.b
+5.d
+True/False Questions
+
+1.False
+2.False
+3.True
+4.False
+5.True
+Short Answers
+
+1.apply() saves data asynchronously without returning a result, while commit() saves data synchronously and returns a boolean indicating whether the save operation was successful.
+kotlin
+
+2.val sharedPref = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)  
+val editor = sharedPref.edit()  
+editor.putBoolean("isLoggedIn", true)  
+editor.apply()
+kotlin
+
+3.val sharedPref = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)  
+val isLoggedIn = sharedPref.getBoolean("isLoggedIn", false)
+
+4.Shared Preferences are easy to use and lightweight for storing key-value pairs, making them ideal for saving user settings or preferences without needing a database or file management. The data also persists across app sessions.
+
+5.You can modify Shared Preferences from multiple threads. However, it's recommended to use apply() for thread safety, as it operates asynchronously and doesn’t block the UI thread.
+
+Code Fix Questions
+
+1.
+editor.putString("username", "JohnDoe")  
+editor.apply()
+The method putValue() does not exist; it should be putString().
+2.
+val username = sharedPref.getString("username", "defaultName")
+The method getValue() does not exist; it should be getString().
+3.
+val editor = sharedPref.edit()  
+editor.remove("key")  
+editor.commit()
+If .clear() is used, all entries will be removed, whereas commit() removes only the specific key.
